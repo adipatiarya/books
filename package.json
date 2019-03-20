@@ -1,0 +1,41 @@
+{
+  "name": "books",
+  "version": "1.0.0",
+  "description": "books tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js"
+  },
+  "engines": {
+    "node": "10.15.3"
+  },
+  "author": "Adipati arya",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
+    "moment-js": "^1.1.15",
+    "mongoose": "^5.4.19",
+    "nodemon": "^1.18.10"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adipatiarya/books.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "tutorial"
+  ],
+  "bugs": {
+    "url": "https://github.com/adipatiarya/books/issues"
+  },
+  "homepage": "https://github.com/adipatiarya/books#readme"
+}
