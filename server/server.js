@@ -10,10 +10,8 @@ mongoose.Promise = global.Promise;
 mongoose.set('useCreateIndex', true);
 mongoose.connect(config.DATABASE, { useNewUrlParser: true });
 
-//user Models
+//Models
 const { User } = require('./models/user');
-
-//Book Models
 const { Book } = require('./models/book');
 
 
