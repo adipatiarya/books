@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
-const bookSchema = mongoose.Schema({
+
+const BookSchema = new mongoose.Schema({
+
   name: {
     type: String,
     required: true
@@ -11,21 +13,21 @@ const bookSchema = mongoose.Schema({
   },
   review: {
     type: String,
-    default: 'n/a'
+    default: ''
   },
   pages: {
     type: String,
-    default: 'n/a'
+    default: ''
   },
   rating: {
     type: Number,
-    default: 'n/a',
+    default: '',
     min: 1,
     max: 5
   },
   price: {
     type: String,
-    default: 'n/a'
+    default: ''
   },
   ownerId: {
     type: String,
@@ -33,6 +35,6 @@ const bookSchema = mongoose.Schema({
   }
 }, { timeStamps: true });
 
-const Book = mongoose.model('Book', bookSchema);
+var book = mongoose.model('Book', BookSchema);
 
-module.exports = Book;
+module.exports = book;
