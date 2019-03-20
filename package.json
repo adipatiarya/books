@@ -1,7 +1,7 @@
 {
-  "name": "books",
+  "name": "express_mongodb",
   "version": "1.0.0",
-  "description": "books tutorial",
+  "description": "express mongodb tutorial",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,7 +27,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adipatiarya/books.git"
+    "url": "git+https://github.com/adipatiarya/express_mongodb.git"
   },
   "keywords": [
     "node",
@@ -35,7 +35,7 @@
     "tutorial"
   ],
   "bugs": {
-    "url": "https://github.com/adipatiarya/books/issues"
+    "url": "https://github.com/adipatiarya/express_mongodb/issues"
   },
-  "homepage": "https://github.com/adipatiarya/books#readme"
+  "homepage": "https://github.com/adipatiarya/express_mongodb#readme"
 }
