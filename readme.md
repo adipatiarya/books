@@ -44,8 +44,6 @@ npm run start
 > http://localhost:3001/api/v1/users
 
 
-
-
 ### POST
 
 > http://localhost:3001/api/v1/book
@@ -54,22 +52,6 @@ npm run start
     "name": "Harry Potter The Explorer",
     "author": "Jk Rowling",
     "ownerId": "Adipati Arya"
-}
-
-> http://localhost:3001/api/v1/register
-
-{
-	"email":"asas@gmailsaa.com",
-	"password":"123456",
-	"name":"adipati",
-	"lastname":"arya"
-}
-
-> http://localhost:3001/api/v1/login
-
-{
-    "email":"abcd@gmail.com",
-    "password":"123456"
 }
 
 ### PUT
