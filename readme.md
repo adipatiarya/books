@@ -20,9 +20,7 @@ npm run start
 ```
 ## Routing
 
-### GET
-
-> method: GET
+### GET action 
 
 > http://localhost:3001/api/v1/book?id=1212121
 
@@ -33,9 +31,7 @@ npm run start
 > http://localhost:3001/api/v1/books?skip=3&limit=2&order=desc
 
 
-### POST 
-
-> method: POST
+### POST action
 
 > http://localhost:3001/api/v1/book
 
@@ -54,9 +50,8 @@ npm run start
 	"lastname":"arya"
 }
 
-### UPDATE
+### PUT action
 
-> method : PUT
 > http://localhost:3001/api/v1/book?id=1212121
 
 {
@@ -65,7 +60,6 @@ npm run start
     "ownerId": "Adipati Arya"
 }
 
-### DELETE
+### DELETE action
 
-> method: DELETE
 > http://localhost:3001/api/v1/book?id=1212121
