@@ -35,12 +35,8 @@ const userSchema = mongoose.Schema({
     type: String
   }
 });
-
-
 userSchema.pre('save', function (next) {
-
   let user = this;
-
   if (user.isModified('password')) {
     bcrypt.genSalt(SALT_I, function (err, salt) {
       if (err) return next(err);
@@ -58,12 +54,10 @@ userSchema.pre('save', function (next) {
 });
 
 userSchema.methods.comparePassword = function (candidatePassword, callBack) {
-
   bcrypt.compare(candidatePassword, this.password, function (err, isMatch) {
     if (err) return callBack(err);
     callBack(null, isMatch);
   });
-
 };
 
 userSchema.methods.generateToken = function (callBack) {
