@@ -88,10 +88,9 @@ userSchema.statics.findByToken = function (token, callBack) {
 
 userSchema.methods.deleteToken = function (token, callBack) {
   let user = this;
-  user.update({ $unset: { token: 1 } }, (err, user) => {
+  user.updateOne({ $unset: { token: 1 } }, (err, user) => {
     if (err) return callBack(err);
     callBack(null, user);
-
   });
 }
 const User = mongoose.model('User', userSchema);
