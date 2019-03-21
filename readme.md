@@ -50,6 +50,13 @@ npm run start
 	"lastname":"arya"
 }
 
+> http://localhost:3001/api/v1/login
+
+{
+    "email":"abcd@gmail.com",
+    "password":"123456"
+}
+
 ### PUT action
 
 > http://localhost:3001/api/v1/book?id=1212121
