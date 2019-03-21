@@ -37,6 +37,7 @@ app.get(`${BASE_URL}/book`, (req, res) => {
 app.get(`${BASE_URL}/books`, (req, res) => {
 
   //localhost:3001/api/v1/books?skip=3&limit=2&order=asc
+  
   let skip = parseInt(req.query.skip);
   let limit = parseInt(req.query.limit);
   let order = req.query.order;
@@ -50,7 +51,11 @@ app.get(`${BASE_URL}/books`, (req, res) => {
 });
 
 //POST
+
 app.post(`${BASE_URL}/book`, (req, res) => {
+  
+  //localhost:3001/api/v1/book
+  
   const book = new Book(req.body);
   book.save((err, doc) => {
     if (err) return res.status(400).send(err);
@@ -61,27 +66,37 @@ app.post(`${BASE_URL}/book`, (req, res) => {
   });
 });
 
+app.post(`${BASE_URL}/register`, (req, res) => {
+
+  //localhost:3001/api/v1/register
+  const user = new User(req.body);
+  
+  user.save((err, doc)=>{
+    if(err) return res.json({success:false, doc});
+    return res.status(200).json({
+      success:true,
+      user:doc
+    })
+  });
+
+});
+
 //UPDATE
 app.put(`${BASE_URL}/book`, (req, res)=>{
 
 //http://localhost:3001/api/v1/books?id=5c92c3a98d93094773d7a797
-
   let id = req.query.id;
   Book.findOneAndUpdate(id, req.body,(err, doc)=>{
     if (err) return res.status(400).send(err);
-    return res.json({
-      success:true,
-      doc:doc
-    })
-
+    return res.json({success:true,doc:doc})
   });
 });
 
 //DELETE
 app.delete(`${BASE_URL}/book`, (req, res)=>{
-
-//http://localhost:3001/api/v1/books?id=5c92c3a98d93094773d7a797
-
+  
+  //http://localhost:3001/api/v1/books?id=5c92c3a98d93094773d7a797
+  
   let id = req.query.id;
   Book.findOneAndDelete(id, req.body, (err, doc)=>{
     if (err) return res.status(400).send(err);
@@ -91,7 +106,6 @@ app.delete(`${BASE_URL}/book`, (req, res)=>{
 });
 
 const port = process.env.PORT || 3001;
-
 app.listen(port, () => {
   console.log(`Server Listen on http://localhost:${port}${BASE_URL}`);
 });
