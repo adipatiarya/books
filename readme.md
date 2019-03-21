@@ -8,10 +8,15 @@ If you haven't used [Mongodb](https://docs.mongodb.com) before, be sure to check
 ## Getting Started
 
 ```shell
-git clone this repo
-cd repo
+
+git clone https://github.com/adipatiarya/express-node-api.git 
+
+cd express-node-api
+
 npm install
+
 npm run start
+
 ```
 ## Routing
 
