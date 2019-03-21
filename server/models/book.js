@@ -1,8 +1,5 @@
 const mongoose = require('mongoose');
-
-
 const BookSchema = new mongoose.Schema({
-
   name: {
     type: String,
     required: true
@@ -33,8 +30,6 @@ const BookSchema = new mongoose.Schema({
     type: String,
     required: true
   }
-}, { timeStamps: true });
+},{ timeStamps: true });
 
-var book = mongoose.model('Book', BookSchema);
-
-module.exports = book;
+module.exports = mongoose.model('Book', BookSchema);
