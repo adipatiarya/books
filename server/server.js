@@ -10,12 +10,16 @@ app.use(cookieParser());
 
 //DB Connection
 mongoose.Promise = global.Promise;
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
-mongoose.connect(config.DATABASE, { useNewUrlParser: true });
+
+mongoose.connect(config.DATABASE);
+
 
 //Models
-const User = require('./models/user');
-const Book = require('./models/book');
+const { User } = require('./models/user');
+const { Book } = require('./models/book');
 
 //ROUTING
 const BASE_URL = `/api/${config.version}`;
@@ -63,7 +67,7 @@ app.put(`${BASE_URL}/book`, (req, res)=>{
 //http://localhost:3001/api/v1/books?id=5c92c3a98d93094773d7a797
 
   let id = req.query.id;
-  Book.findByIdAndUpdate(id, req.body, {new:true},(err, doc)=>{
+  Book.findOneAndUpdate(id, req.body,(err, doc)=>{
     if (err) return res.status(400).send(err);
     return res.json({
       success:true,

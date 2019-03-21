@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const BookSchema = new mongoose.Schema({
+const bookSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true
@@ -32,4 +32,5 @@ const BookSchema = new mongoose.Schema({
   }
 },{ timeStamps: true });
 
-module.exports = mongoose.model('Book', BookSchema);
+const Book = mongoose.model('Book', bookSchema);
+module.exports = { Book }
