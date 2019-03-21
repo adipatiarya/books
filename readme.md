@@ -20,7 +20,18 @@ npm run start
 ```
 ## Routing
 
-### GET action 
+# AUTH
+
+> POST: http://localhost:3001/api/v1/login
+
+> GET: http://localhost:3001/api/v1/logout
+
+> POST http://localhost:3001/api/v1/register {name, email, password}
+
+> GET http://localhost:3001/api/v1/user
+
+
+### GET
 
 > http://localhost:3001/api/v1/books
 
@@ -35,7 +46,7 @@ npm run start
 
 
 
-### POST action
+### POST
 
 > http://localhost:3001/api/v1/book
 
@@ -61,7 +72,7 @@ npm run start
     "password":"123456"
 }
 
-### PUT action
+### PUT
 
 > http://localhost:3001/api/v1/book?id=1212121
 
@@ -71,6 +82,6 @@ npm run start
     "ownerId": "Adipati Arya"
 }
 
-### DELETE action
+### DELETE
 
 > http://localhost:3001/api/v1/book?id=1212121
