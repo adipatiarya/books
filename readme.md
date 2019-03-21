@@ -22,7 +22,7 @@ npm run start
 
 ### AUTH
 
-> POST: http://localhost:3001/api/v1/login
+> POST: http://localhost:3001/api/v1/login {email, password}
 
 > GET: http://localhost:3001/api/v1/logout
 
