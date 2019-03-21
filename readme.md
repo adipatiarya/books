@@ -22,13 +22,17 @@ npm run start
 
 ### GET action 
 
-> http://localhost:3001/api/v1/book?id=1212121
-
 > http://localhost:3001/api/v1/books
 
-> http://localhost:3001/api/v1/books?skip=3&limit=2&order=asc
+> http://localhost:3001/api/v1/books?skip=3&limit=2&order=<asc, desc>
 
-> http://localhost:3001/api/v1/books?skip=3&limit=2&order=desc
+> http://localhost:3001/api/v1/book?id=1212121
+
+> http://localhost:3001/api/v1/book/review?id=userid
+
+> http://localhost:3001/api/v1/users
+
+
 
 
 ### POST action
