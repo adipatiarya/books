@@ -20,7 +20,7 @@ npm run start
 ```
 ## Routing
 
-# AUTH
+### AUTH
 
 > POST: http://localhost:3001/api/v1/login
 
