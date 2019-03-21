@@ -1,8 +1,7 @@
 {
-  "name": "express_mongodb",
+  "name": "express-node-api",
   "version": "1.0.0",
-  "description": "express mongodb tutorial",
-  "main": "index.js",
+  "description": "Rest api with nodejs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
@@ -27,15 +26,21 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adipatiarya/express_mongodb.git"
+    "url": "git+https://github.com/adipatiarya/express-node-api.git"
   },
   "keywords": [
     "node",
     "express",
-    "tutorial"
+    "Rest Api",
+    "Java script",
+    "tutorial",
+    "React developer",
+    "React Full Stack Developer",
+    "mongodb",
+    "mongodb install"
   ],
   "bugs": {
-    "url": "https://github.com/adipatiarya/express_mongodb/issues"
+    "url": "https://github.com/adipatiarya/express-node-api/issues"
   },
-  "homepage": "https://github.com/adipatiarya/express_mongodb#readme"
+  "homepage": "https://github.com/adipatiarya/express-node-api#readme"
 }
