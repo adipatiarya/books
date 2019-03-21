@@ -36,6 +36,7 @@ npm run start
 ### POST 
 
 > method: POST
+
 > http://localhost:3001/api/v1/book
 
 {
@@ -43,6 +44,7 @@ npm run start
     "author": "Jk Rowling",
     "ownerId": "Adipati Arya"
 }
+
 > http://localhost:3001/api/v1/register
 
 {
