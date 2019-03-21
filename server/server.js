@@ -26,12 +26,14 @@ const BASE_URL = `/api/${config.version}`;
 
 //GET
 app.get(`${BASE_URL}/book`, (req, res) => {
+  
   let id = req.query.id;
 
   Book.findById(id, (err,doc) => {
     if (err) return res.status(400).send(err);
     res.send(doc);
   });
+  
 });
 
 app.get(`${BASE_URL}/books`, (req, res) => {
@@ -84,28 +86,20 @@ app.post(`${BASE_URL}/register`, (req, res) => {
 app.post(`${BASE_URL}/login`, (req, res) => {
 
   //localhost:3001/api/v1/login
+
   User.findOne({email:req.body.email}, (err, user)=>{
+
     if(!user) return res.json({isAuth:false, message:'Email wrong!!'});
-
     user.comparePassword(req.body.password, (err, isMatch)=>{
-
       if(!isMatch) return res.json({isAuth:false, message:'Password not match'});
-
       user.generateToken((err,user)=> {
         if(err) return res.status(400).send(err);
         res.cookie('auth', user.token).json({
-
-          isAuth:true, id:user._id, email:user.email 
-
+          isAuth:true, id:user._id, email:user.email
         });
-
       });
-
-
     });
-
   });
-
 
 });
 
